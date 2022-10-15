@@ -14,6 +14,7 @@ const SignIn = () => {
                         headers: { "Content-Type": "application/json" },
                         url: "http://localhost:4040/user/googlelogin",
                         data: { tokenId: credentialResponse.credential },
+                        withCredentials: true
                     }).then(response => {
                         console.log("Google login success", response);
                     })
